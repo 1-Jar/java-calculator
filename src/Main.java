@@ -19,7 +19,7 @@ public class Main {
 			n.add(s.nextInt());
 			x = s.next();
 			n.add(s.nextInt());
-        if (o.contains(x)) {if (x.equals("+")) {addizione(n.get(0), n.get(1));} else if (x.equals("-")) {sottrazione(n.get(0), n.get(1));} else if (x.equalsIgnoreCase("X") || x.equals("*")) {moltiplicazione(n.get(0), n.get(1));} else if (x.equals(":") || x.equals("/")) {divisione(n.get(0), n.get(1));}} else {errore();}
+        if (o.contains(x)) {if (x.equals("+")) {add(n.get(0), n.get(1));} else if (x.equals("-")) {sub(n.get(0), n.get(1));} else if (x.equalsIgnoreCase("X") || x.equals("*")) {multi(n.get(0), n.get(1));} else if (x.equals(":") || x.equals("/")) {div(n.get(0), n.get(1));}} else {errore();}
 	} else if (v.equalsIgnoreCase("Checker")) {
 		ArrayList<Integer> g = new ArrayList<Integer>();
 		System.out.println("What operation you want to check?");
@@ -40,7 +40,7 @@ public class Main {
 		erroreT();
 		}
 	} else {
-		errore();
+		err();
 	}
 }
 
@@ -82,27 +82,31 @@ public class Main {
 		}
 	}
 
-	static void addizione(int a, int b) {
+	static void add(int a, int b) {
 		int r = a + b;
 		System.out.println("The result of your addition is: " + r);
 	}
 
-	static void sottrazione(int a, int b) {
+	static void sub(int a, int b) {
 		int r = a - b;
 		System.out.println("The result of your subtraction is: " + r);
 	}
 
-	static void divisione(int a, int b) {
+	static void div(int a, int b) {
 		int r = a / b;
+		if(a % b == 0) {
 		System.out.println("The result of your division is: " + r);
+		} else {
+		System.out.println("The result of your division is: " + r + " with rest " + a % b);
+		}
 	}
 
-	static void moltiplicazione(int a, int b) {
+	static void mult(int a, int b) {
 		int r = a * b;
 		System.out.println("The result of your multiplication is: " + r);
 	}
 
-	static void errore() {
+	static void err() {
 		System.out.println("There was an error. Retry, please.");
 	}
 	
