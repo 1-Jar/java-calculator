@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-		System.out.println("Calculator V1.0 by leokotnia");
+		System.out.println("Calculator V1.0 by 1Jar");
 		System.out.println("Example for calculator: 10 (sign) 5");
 		System.out.println("Example for checker: 10 (sign) 5 = (your result) \n");
 		Scanner s = new Scanner(System.in);
